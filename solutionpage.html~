@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="loader.css" media="screen"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="solutioninput.js"></script>
+<script src="nodesave.js"></script>
+<script src="load.js"></script>
+<script src="realnode.js"></script>
+<script src="loadprofile.js"></script>
+<script type="text/javascript">
+	return input();
+</script>
+<script>
+function clears(){
+	for (i=1;i<17;i++) {
+		document.getElementById('node'+i).value="0";
+		localStorage.setItem('n'+i,"0");
+	}
+	}
+</script>
+ <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+ </style>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <body onload="loadprofile()">
+  <center><br><img id="weblogo" src="weblogo.png" style="display:block"/><div id="loader"></div></center>
+  <div id ="body" style="display:none">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#"><img height="50px" src="menu.png"  /></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" id="myprofile" href="login.html">เข้าสู่ระบบ<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><img src="profile.png" height="30px" /></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="f" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Me</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+          <a class="dropdown-item" href="setting.html">ข้อมูลส่วนตัว</a>
+          <a class="dropdown-item" href="comment.html">กล่องแสดงความเห็น</a>
+          <a class="dropdown-item" onclick="logout()" href="index.html">ออกจากระบบ</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="zoom">
+<div class="left">
+<div><img height="70px" src="weblogo.png"></div>
+	<br>
+	<p>กรอกโจทย์</p>
+	<select id="node1">
+	  <option value="0">-</option>
+	  <option value="1">1</option>
+	  <option value="2">2</option>
+	  <option value="3">3</option>
+	  <option value="4">4</option>
+	</select>
+	<select id="node2">
+	  <option value="0">-</option>
+	  <option value="1">1</option>
+	  <option value="2">2</option>
+	  <option value="3">3</option>
+	  <option value="4">4</option>
+	</select>
+	<select id="node3">
+	  <option value="0">-</option>
+	  <option value="1">1</option>
+	  <option value="2">2</option>
+	  <option value="3">3</option>
+	  <option value="4">4</option>
+	</select>
+	<select id="node4">
+	  <option value="0">-</option>
+	  <option value="1">1</option>
+	  <option value="2">2</option>
+	  <option value="3">3</option>
+	  <option value="4">4</option>
+	</select>
+	<br><br>
+	<select id="node5">
+	  <option value="0">-</option>
+	  <option value="1">1</option>
+	  <option value="2">2</option>
+	  <option value="3">3</option>
+	  <option value="4">4</option>
+	</select>
+	<select id="node6">
+	  <option value="0">-</option>
+	  <option value="1">1</option>
+	  <option value="2">2</option>
+	  <option value="3">3</option>
+	  <option value="4">4</option>
+	</select>
+	<select id="node7">
+	  <option value="0">-</option>
+	  <option value="1">1</option>
+	  <option value="2">2</option>
+	  <option value="3">3</option>
+	  <option value="4">4</option>
+	</select>
+	<select id="node8">
+	  <option value="0">-</option>
+	  <option value="1">1</option>
+	  <option value="2">2</option>
+	  <option value="3">3</option>
+	  <option value="4">4</option>
+	</select>
+	<br><br>
+	<select id="node9">
+	  <option value="0">-</option>
+	  <option value="1">1</option>
+	  <option value="2">2</option>
+	  <option value="3">3</option>
+	  <option value="4">4</option>
+	</select>
+	<select id="node10">
+	  <option value="0">-</option>
+	  <option value="1">1</option>
+	  <option value="2">2</option>
+	  <option value="3">3</option>
+	  <option value="4">4</option>
+	</select>
+	<select id="node11">
+	  <option value="0">-</option>
+	  <option value="1">1</option>
+	  <option value="2">2</option>
+	  <option value="3">3</option>
+	  <option value="4">4</option>
+	</select>
+	<select id="node12">
+	  <option value="0">-</option>
+	  <option value="1">1</option>
+	  <option value="2">2</option>
+	  <option value="3">3</option>
+	  <option value="4">4</option>
+	</select>
+	<br><br>
+	<select id="node13">
+	  <option value="0">-</option>
+	  <option value="1">1</option>
+	  <option value="2">2</option>
+	  <option value="3">3</option>
+	  <option value="4">4</option>
+	</select>
+	<select id="node14">
+	  <option value="0">-</option>
+	  <option value="1">1</option>A4 
+	  <option value="2">2</option>
+	  <option value="3">3</option>
+	  <option value="4">4</option>
+	</select>
+	<select id="node15">
+	  <option value="0">-</option>
+	  <option value="1">1</option>
+	  <option value="2">2</option>
+	  <option value="3">3</option>
+	  <option value="4">4</option>
+	</select>
+	<select id="node16">
+	  <option value="0">-</option>
+	  <option value="1">1</option>
+	  <option value="2">2</option>
+	  <option value="3">3</option>
+	  <option value="4">4</option>
+	</select>
+	<br>
+	<br>
+	<button onclick="input()">ยืนยัน</button>
+	<button onclick="clears()">รีเซ็ท</button>
+</div>
+<div class="main">
+	<p>ผลเฉลย</p>
+	<p style="font-size:11px">A<sub>1</sub> B<sub>1</sub></sub> C<sub>1</sub></sub> D<sub>1</sub> , 
+		</sub>A<sub>2 </sub> </sub>B<sub>2 </sub> </sub>C<sub>2</sub> </sub>D<sub>2</sub> , 
+		</sub>A<sub>3 </sub> </sub>B<sub>3 </sub> </sub>C<sub>3</sub> </sub>D<sub>3</sub> , 
+		</sub>A<sub>4 </sub> </sub>B<sub>4 </sub> </sub>C<sub>4</sub> </sub>D<sub>4</sub></p>
+	<div id="loader2"></div>
+	<ol start="1" id="row1" onclick="show(event)" >
+  	
+	</ol>
+	<ul  id="row2">
+
+	</ul>
+	<div> <a style="margin:5px;padding:5px;font-size:10px;folat:center" >ข้อมูลติดต่อ: sudoku4x4server@gmail.com </a> </div>
+	<div class="sol-popup" id="zoomsol" style="display:none" >
+	<center>
+	<div class="soltable">
+	<a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;</a><a href="#" onclick="closee()">&times;</a>
+	 <table style="width:90%;font-size:35px" class="sol-content">
+	  <tr>
+		<td style="color:yellow;text-align:center" name="leftup" id="sol1">-</td>
+		<td style="color:yellow;text-align:center" name="leftup" id="sol2">-</td> 
+		<td style="color:#00FFFF;text-align:center" name="rightup" id="sol3">-</td>
+		<td style="color:#00FFFF;text-align:center" name="rightup" id="sol4">-</td>
+	  </tr>
+	  <tr>
+		<td style="color:yellow;text-align:center" name="leftup" id="sol5">-</td>
+		<td style="color:yellow;text-align:center" name="leftup" id="sol6">-</td> 
+		<td style="color:#00FFFF;text-align:center" name="rightup" id="sol7">-</td>
+		<td style="color:#00FFFF;text-align:center" name="rightup" id="sol8">-</td>
+	  </tr>
+	  <tr>
+		<td style="color:#00FA9A;text-align:center" name="leftdown" id="sol9">-</td>
+		<td style="color:#00FA9A;text-align:center" name="leftdown" id="sol10">-</td> 
+		<td style="color:#FFE4E1;text-align:center" name="rightdown" id="sol11">-</td>
+		<td style="color:#FFE4E1;text-align:center" name="rightdown" id="sol12">-</td>
+	  </tr>
+	  <tr>
+		<td style="color:#00FA9A;text-align:center" name="leftdown" id="sol13">-</td>
+		<td style="color:#00FA9A;text-align:center" name="leftdown" id="sol14">-</td> 
+		<td style="color:#FFE4E1;text-align:center" name="rightdown" id="sol15">-</td>
+		<td style="color:#FFE4E1;text-align:center" name="rightdown" id="sol16">-</td>
+	  </tr>
+	</table>
+	<br>
+	</div>
+	</center>
+	</div>
+</div>
+<div class="rihgt">
+<br>
+<p>โจทย์ Sudoku4x4</p>
+<center>
+<table style="width:20%;font-size:15px" class="table table-bordered">
+  <tr>
+    <td style="color:red" id="rn1">0</td>
+    <td style="color:red" id="rn2">0</td> 
+    <td style="color:green"id="rn3">0</td>
+    <td style="color:green" id="rn4">0</td>
+  </tr>
+  <tr>
+	<td style="color:red" id="rn5">0</td>
+    <td style="color:red" id="rn6">0</td> 
+    <td style="color:green" id="rn7">0</td>
+    <td style="color:green" id="rn8">0</td>
+  </tr>
+  <tr>
+    <td style="color:blue" id="rn9">0</td>
+    <td style="color:blue" id="rn10">0</td> 
+    <td style="color:orange" id="rn11">0</td>
+    <td style="color:orange" id="rn12">0</td>
+  </tr>
+  <tr>
+    <td style="color:blue" id="rn13">0</td>
+    <td style="color:blue" id="rn14">0</td> 
+    <td style="color:orange" id="rn15">0</td>
+    <td style="color:orange" id="rn16">0</td>
+  </tr>
+	<tr style="bord:white">
+	<td> </td> 
+	</tr>
+	  <tr>
+		<td style="color:red" ></sub>A<sub>1 </sub></td>
+		<td style="color:red" ></sub>B<sub>1 </sub></td> 
+		<td style="color:green"></sub>C<sub>1 </sub></td>
+		<td style="color:green" ></sub>D<sub>1 </sub></td>
+	  </tr>
+	  <tr>
+		<td style="color:red" ></sub>A<sub>2 </sub></td>
+		<td style="color:red" ></sub>B<sub>2 </sub></td> 
+		<td style="color:green" ></sub>C<sub>2 </sub></td>
+		<td style="color:green" ></sub>D<sub>2 </sub></td>
+	  </tr>
+	  <tr>
+		<td style="color:blue" ></sub>A<sub>3 </sub></td>
+		<td style="color:blue" ></sub>B<sub>3 </sub></td> 
+		<td style="color:orange" ></sub>C<sub>3 </sub></td>
+		<td style="color:orange" ></sub>D<sub>3 </sub></td>
+	  </tr>
+	  <tr>
+		<td style="color:blue" ></sub>A<sub>4 </sub></td>
+		<td style="color:blue" ></sub>B<sub>4 </sub></td> 
+		<td style="color:orange" ></sub>C<sub>4 </sub></td>
+		<td style="color:orange" ></sub>D<sub>4 </sub></td>
+	  </tr>
+	</table>
+</center>
+</div>
+</div>
+</div>
+<div id="body2" style="display:none">
+<center>
+<p> กรอกชื่อผู้ใช้หรือรหัสผิด </p>
+<a href="login.html">กลับไปยังหน้าเข้าสู่ระบบ</a>
+</center>
+</div>
+</body>
+</html>

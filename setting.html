@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>แก้ไขประวัติส่วนตัว</title>
+   <!--Made with love by Mutiullah Samim -->
+   
+	<!--Bootsrap 4 CDN-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!--Fontawesome CDN-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+	<!--Custom styles-->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="edit.js"></script>
+</head>
+<body onload="profileread()">
+<div>
+	<center>
+	<br>
+	<img src="weblogo.png" style="padding:20px" />
+	<br>
+	<p> แก้ไขข้อมูลส่วนตัว</p>
+	<form>
+	<p id="name"> </p> 
+	<input type="text" id="editname" value="" size="25"> 
+	<p id = "lastname"> </p> 
+	<input type="text" id="editlastname" value="" size="25"> 
+	<p id = "email"> </p>
+	<input type="text" id="editemail" value="" size="25"><br><br>
+	<input type="submit" value="ยืนยัน" style="cursor:pointer;" onclick="profileedit()"/>
+	</form>
+	<br>
+	<a href="solutionpage.html">ยกเลิกการแก้ไขและกลับไปหน้าผลเฉลย</a>
+	</center>
+</div>
+
+</body>
+</html>

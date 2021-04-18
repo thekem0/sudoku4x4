@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>แสดงความคิดเห็น</title>
+   <!--Made with love by Mutiullah Samim -->
+   
+	<!--Bootsrap 4 CDN-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!--Fontawesome CDN-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+	<!--Custom styles-->
+	<style>
+	.mentbox {
+	  position: fixed; /* Stay in place */
+	  z-index: 1; /* Sit on top */
+	  padding-top: 10px; /* Location of the box */
+	  left: 500px;
+	  top: 0;
+	  width: 70%; /* Full width */
+	  height: 100%; /* Full height */
+	  overflow: auto; /* Enable scroll if needed */
+	  background-color: rgba(0,0,0,0); /* Black w/ opacity */
+	}
+	</style>
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+<script type="text/javascript" >
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBq1w5qEFATENJQzjhkYMfoq9PEBCdmBzo",
+    authDomain: "sudoku4x4solver.firebaseapp.com",
+    databaseURL: "https://sudoku4x4solver.firebaseio.com",
+    projectId: "sudoku4x4solver",
+    storageBucket: "sudoku4x4solver.appspot.com",
+    messagingSenderId: "409029276653",
+    appId: "1:409029276653:web:a93ad3767404639da42de4",
+    measurementId: "G-P730PJLMJJ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  var db = firebase.firestore();
+  db.collection("comment")
+    .onSnapshot(function(querySnapshot) {
+    	$("#comment").html('');
+        querySnapshot.forEach(function(doc) {
+            $("#comment").append('<li"> ความคิดเห็นของ '+doc.data().user+' : '+ doc.data().txt +'</li><br>')
+        });
+    });
+    function savedata() {
+    var db = firebase.firestore();
+    if($("#text").val()==''){
+    	$("#re").text("Comment box empty");
+    }
+    else{
+    	var today = new Date();
+		var dd = String(today.getDate()).padStart(2, '0');
+		var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+		var yyyy = today.getFullYear();
+		today = mm + '/' + dd + '/' + yyyy;
+    	$("#re").text("");
+    	db.collection("comment").add({
+    	user: sessionStorage.getItem("user"),
+    	txt: $("#text").val(),
+    	date: today
+		})
+		.then(function(docRef) {
+    	$("#re").text("");
+		})
+		.catch(function(error) {
+    	console.error("Error adding document: ", error);
+		});
+    }	
+    }
+</script>
+</head>
+<body>
+<div class="mentbox">
+	<br>
+	<img src="weblogo.png" style="padding:20px" />
+	<br>
+	<textarea id="text" required/></textarea>
+	<input type="button" value="ยืนยัน" style="cursor:pointer" onclick="savedata()"/>
+	<p id="re"></p>
+	<a href="solutionpage.html">กลับไปหน้าผลเฉลย</a>
+	<p> โปรดแสดงความคิดเห็นด้วยคำสุภาพ </p>
+	<form >
+	<ol id="comment">
+	
+	</ol>
+	<br>
+	<br>
+	</form>
+	<br>
+</div>
+
+</body>
+</html>

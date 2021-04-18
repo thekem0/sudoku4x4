@@ -1,0 +1,291 @@
+function loadsol(row){
+	for(i=0;i<row.length;i++){
+		var url = "https://script.google.com/macros/s/AKfycbwATrw7z4SRVNHaCHElAZLYXhAY5vjuB0hpkGKVX9Q_9k5e0g/exec?uname=usertest&pass=123a&num="+(i+1)+"&row1="+row[i];
+			$.getJSON(url, function(json){
+				for (i=1;i<13;i++){
+					 var solution = "json.user[0].sol"+i;
+					 if (eval(solution).search("X")==-1){
+							$("ol").append("<li>"+eval(solution)+"</li>");
+						}
+				}
+				});
+	}
+}
+//https://script.google.com/macros/s/AKfycbwATrw7z4SRVNHaCHElAZLYXhAY5vjuB0hpkGKVX9Q_9k5e0g/exec?uname=usertest&pass=123a&num=1&row1=1243
+//https://script.google.com/macros/s/AKfycbxSf9Bazk9PasmQs-G2gEDn5MoqNWs66Dsv8jmiUcSc-x8T1jQ/exec?uname=usertest&pass=123a&num=1
+
+function solution2(){
+		var url = "https://script.google.com/macros/s/AKfycbxSf9Bazk9PasmQs-G2gEDn5MoqNWs66Dsv8jmiUcSc-x8T1jQ/exec?uname=usertest&pass=123a&num="+2;
+			$.getJSON(url, function(json){
+				for (j=1;j<13;j++){
+					 var solution = "json.user[0].sol"+j;
+					 if (eval(solution).search("X")==-1){
+							$("#row2").append("<li>"+eval(solution)+"</li>");
+						}
+				}
+				});
+		return solution3();
+}
+function solution3(){
+		var url = "https://script.google.com/macros/s/AKfycbxSf9Bazk9PasmQs-G2gEDn5MoqNWs66Dsv8jmiUcSc-x8T1jQ/exec?uname=usertest&pass=123a&num="+3;
+			$.getJSON(url, function(json){
+				for (j=1;j<13;j++){
+					 var solution = "json.user[0].sol"+j;
+					 if (eval(solution).search("X")==-1){
+							$("#row3").append("<li>"+eval(solution)+"</li>");
+						}
+				}
+				});
+		return solution4();
+}
+function solution4(){
+		var url = "https://script.google.com/macros/s/AKfycbxSf9Bazk9PasmQs-G2gEDn5MoqNWs66Dsv8jmiUcSc-x8T1jQ/exec?uname=usertest&pass=123a&num="+4;
+			$.getJSON(url, function(json){
+				for (j=1;j<13;j++){
+					 var solution = "json.user[0].sol"+j;
+					 if (eval(solution).search("X")==-1){
+							$("#row4").append("<li>"+eval(solution)+"</li>");
+						}
+				}
+				});
+			return solution5();
+}
+function solution5(){
+		var url = "https://script.google.com/macros/s/AKfycbxSf9Bazk9PasmQs-G2gEDn5MoqNWs66Dsv8jmiUcSc-x8T1jQ/exec?uname=usertest&pass=123a&num="+5;
+			$.getJSON(url, function(json){
+				for (j=1;j<13;j++){
+					 var solution = "json.user[0].sol"+j;
+					 if (eval(solution).search("X")==-1){
+							$("#row5").append("<li>"+eval(solution)+"</li>");
+						}
+				}
+				});
+			return solution6();
+}
+function solution6(){
+		var url = "https://script.google.com/macros/s/AKfycbxSf9Bazk9PasmQs-G2gEDn5MoqNWs66Dsv8jmiUcSc-x8T1jQ/exec?uname=usertest&pass=123a&num="+6;
+			$.getJSON(url, function(json){
+				for (j=1;j<13;j++){
+					 var solution = "json.user[0].sol"+j;
+					 if (eval(solution).search("X")==-1){
+							$("#row6").append("<li>"+eval(solution)+"</li>");
+						}
+				}
+				});
+			return solution7();
+}
+function solution7(){
+		var url = "https://script.google.com/macros/s/AKfycbxSf9Bazk9PasmQs-G2gEDn5MoqNWs66Dsv8jmiUcSc-x8T1jQ/exec?uname=usertest&pass=123a&num="+7;
+			$.getJSON(url, function(json){
+				for (j=1;j<13;j++){
+					 var solution = "json.user[0].sol"+j;
+					 if (eval(solution).search("X")==-1){
+							$("#row7").append("<li>"+eval(solution)+"</li>");
+						}
+				}
+				});
+			return solution8();
+}
+function solution8(){
+		var url = "https://script.google.com/macros/s/AKfycbxSf9Bazk9PasmQs-G2gEDn5MoqNWs66Dsv8jmiUcSc-x8T1jQ/exec?uname=usertest&pass=123a&num="+8;
+			$.getJSON(url, function(json){
+				for (j=1;j<13;j++){
+					 var solution = "json.user[0].sol"+j;
+					 if (eval(solution).search("X")==-1){
+							$("#row8").append("<li>"+eval(solution)+"</li>");
+						}
+				}
+				});
+			return solution9();
+}
+function solution9(){
+		var url = "https://script.google.com/macros/s/AKfycbxSf9Bazk9PasmQs-G2gEDn5MoqNWs66Dsv8jmiUcSc-x8T1jQ/exec?uname=usertest&pass=123a&num="+9;
+			$.getJSON(url, function(json){
+				for (j=1;j<13;j++){
+					 var solution = "json.user[0].sol"+j;
+					 if (eval(solution).search("X")==-1){
+							$("#row9").append("<li>"+eval(solution)+"</li>");
+						}
+				}
+				});
+			return solution10();
+}
+function solution10(){
+		var url = "https://script.google.com/macros/s/AKfycbxSf9Bazk9PasmQs-G2gEDn5MoqNWs66Dsv8jmiUcSc-x8T1jQ/exec?uname=usertest&pass=123a&num="+10;
+			$.getJSON(url, function(json){
+				for (j=1;j<13;j++){
+					 var solution = "json.user[0].sol"+j;
+					 if (eval(solution).search("X")==-1){
+							$("#row10").append("<li>"+eval(solution)+"</li>");
+						}
+				}
+				});
+			return solution11();
+}
+function solution11(){
+		var url = "https://script.google.com/macros/s/AKfycbxSf9Bazk9PasmQs-G2gEDn5MoqNWs66Dsv8jmiUcSc-x8T1jQ/exec?uname=usertest&pass=123a&num="+11;
+			$.getJSON(url, function(json){
+				for (j=1;j<13;j++){
+					 var solution = "json.user[0].sol"+j;
+					 if (eval(solution).search("X")==-1){
+							$("#row11").append("<li>"+eval(solution)+"</li>");
+						}
+				}
+				});
+			return solution12();
+}
+function solution12(){
+		var url = "https://script.google.com/macros/s/AKfycbxSf9Bazk9PasmQs-G2gEDn5MoqNWs66Dsv8jmiUcSc-x8T1jQ/exec?uname=usertest&pass=123a&num="+12;
+			$.getJSON(url, function(json){
+				for (j=1;j<13;j++){
+					 var solution = "json.user[0].sol"+j;
+					 if (eval(solution).search("X")==-1){
+							$("#row12").append("<li>"+eval(solution)+"</li>");
+						}
+				}
+				});
+			return solution13();
+}
+function solution13(){
+		var url = "https://script.google.com/macros/s/AKfycbxSf9Bazk9PasmQs-G2gEDn5MoqNWs66Dsv8jmiUcSc-x8T1jQ/exec?uname=usertest&pass=123a&num="+13;
+			$.getJSON(url, function(json){
+				for (j=1;j<13;j++){
+					 var solution = "json.user[0].sol"+j;
+					 if (eval(solution).search("X")==-1){
+							$("#row13").append("<li>"+eval(solution)+"</li>");
+						}
+				}
+				});
+			return solution14();
+}
+function solution14(){
+		var url = "https://script.google.com/macros/s/AKfycbxSf9Bazk9PasmQs-G2gEDn5MoqNWs66Dsv8jmiUcSc-x8T1jQ/exec?uname=usertest&pass=123a&num="+14;
+			$.getJSON(url, function(json){
+				for (j=1;j<13;j++){
+					 var solution = "json.user[0].sol"+j;
+					 if (eval(solution).search("X")==-1){
+							$("#row14").append("<li>"+eval(solution)+"</li>");
+						}
+				}
+				});
+			return solution15();
+}
+function solution15(){
+		var url = "https://script.google.com/macros/s/AKfycbxSf9Bazk9PasmQs-G2gEDn5MoqNWs66Dsv8jmiUcSc-x8T1jQ/exec?uname=usertest&pass=123a&num="+15;
+			$.getJSON(url, function(json){
+				for (j=1;j<13;j++){
+					 var solution = "json.user[0].sol"+j;
+					 if (eval(solution).search("X")==-1){
+							$("#row15").append("<li>"+eval(solution)+"</li>");
+						}
+				}
+				});
+			return solution16();
+}
+function solution16(){
+		var url = "https://script.google.com/macros/s/AKfycbxSf9Bazk9PasmQs-G2gEDn5MoqNWs66Dsv8jmiUcSc-x8T1jQ/exec?uname=usertest&pass=123a&num="+16;
+			$.getJSON(url, function(json){
+				for (j=1;j<13;j++){
+					 var solution = "json.user[0].sol"+j;
+					 if (eval(solution).search("X")==-1){
+							$("#row16").append("<li>"+eval(solution)+"</li>");
+						}
+				}
+				});
+			return solution17();
+}
+function solution17(){
+		var url = "https://script.google.com/macros/s/AKfycbxSf9Bazk9PasmQs-G2gEDn5MoqNWs66Dsv8jmiUcSc-x8T1jQ/exec?uname=usertest&pass=123a&num="+17;
+			$.getJSON(url, function(json){
+				for (j=1;j<13;j++){
+					 var solution = "json.user[0].sol"+j;
+					 if (eval(solution).search("X")==-1){
+							$("#row17").append("<li>"+eval(solution)+"</li>");
+						}
+				}
+				});
+			return solution18();
+}
+function solution18(){
+		var url = "https://script.google.com/macros/s/AKfycbxSf9Bazk9PasmQs-G2gEDn5MoqNWs66Dsv8jmiUcSc-x8T1jQ/exec?uname=usertest&pass=123a&num="+18;
+			$.getJSON(url, function(json){
+				for (j=1;j<13;j++){
+					 var solution = "json.user[0].sol"+j;
+					 if (eval(solution).search("X")==-1){
+							$("#row18").append("<li>"+eval(solution)+"</li>");
+						}
+				}
+				});
+			return solution19();
+}
+function solution19(){
+		var url = "https://script.google.com/macros/s/AKfycbxSf9Bazk9PasmQs-G2gEDn5MoqNWs66Dsv8jmiUcSc-x8T1jQ/exec?uname=usertest&pass=123a&num="+19;
+			$.getJSON(url, function(json){
+				for (j=1;j<13;j++){
+					 var solution = "json.user[0].sol"+j;
+					 if (eval(solution).search("X")==-1){
+							$("#row19").append("<li>"+eval(solution)+"</li>");
+						}
+				}
+				});
+			return solution20();
+}
+function solution20(){
+		var url = "https://script.google.com/macros/s/AKfycbxSf9Bazk9PasmQs-G2gEDn5MoqNWs66Dsv8jmiUcSc-x8T1jQ/exec?uname=usertest&pass=123a&num="+20;
+			$.getJSON(url, function(json){
+				for (j=1;j<13;j++){
+					 var solution = "json.user[0].sol"+j;
+					 if (eval(solution).search("X")==-1){
+							$("#row20").append("<li>"+eval(solution)+"</li>");
+						}
+				}
+				});
+			return solution21();
+}
+function solution21(){
+		var url = "https://script.google.com/macros/s/AKfycbxSf9Bazk9PasmQs-G2gEDn5MoqNWs66Dsv8jmiUcSc-x8T1jQ/exec?uname=usertest&pass=123a&num="+21;
+			$.getJSON(url, function(json){
+				for (j=1;j<13;j++){
+					 var solution = "json.user[0].sol"+j;
+					 if (eval(solution).search("X")==-1){
+							$("#row21").append("<li>"+eval(solution)+"</li>");
+						}
+				}
+				});
+			return solution22();
+}
+function solution22(){
+		var url = "https://script.google.com/macros/s/AKfycbxSf9Bazk9PasmQs-G2gEDn5MoqNWs66Dsv8jmiUcSc-x8T1jQ/exec?uname=usertest&pass=123a&num="+22;
+			$.getJSON(url, function(json){
+				for (j=1;j<13;j++){
+					 var solution = "json.user[0].sol"+j;
+					 if (eval(solution).search("X")==-1){
+							$("#row22").append("<li>"+eval(solution)+"</li>");
+						}
+				}
+				});
+			return solution23();
+}
+function solution23(){
+		var url = "https://script.google.com/macros/s/AKfycbxSf9Bazk9PasmQs-G2gEDn5MoqNWs66Dsv8jmiUcSc-x8T1jQ/exec?uname=usertest&pass=123a&num="+23;
+			$.getJSON(url, function(json){
+				for (j=1;j<13;j++){
+					 var solution = "json.user[0].sol"+j;
+					 if (eval(solution).search("X")==-1){
+							$("#row23").append("<li>"+eval(solution)+"</li>");
+						}
+				}
+				});
+			return solution24();
+}
+function solution24(){
+		var url = "https://script.google.com/macros/s/AKfycbxSf9Bazk9PasmQs-G2gEDn5MoqNWs66Dsv8jmiUcSc-x8T1jQ/exec?uname=usertest&pass=123a&num="+24;
+			$.getJSON(url, function(json){
+				for (j=1;j<13;j++){
+					 var solution = "json.user[0].sol"+j;
+					 if (eval(solution).search("X")==-1){
+							$("#row24").append("<li>"+eval(solution)+"</li>");
+						}
+				}
+				});
+}

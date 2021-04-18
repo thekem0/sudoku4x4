@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registeration</title>
+</head>
+<!--Bootsrap 4 CDN-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<!--Fontawesome CDN-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script>
+function passwordvisible() {
+  var x = document.getElementById("inputpass");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+<script src="checkusername.js"></script>
+<script src="checkpassword.js"></script>
+<script src="checkemail.js"></script>
+<script src="checkprofile.js"></script>
+<script src="inputmember.js"></script>
+<body>
+<form style="margin:50px">
+<center><h2>ลงทะเบียน </h2></center>
+<table border="1" align="center" width="600" bgcolor="white" >
+<tr>
+<th>username</th>
+<td><input type="text" name="user" id="fn1" maxlength="10" title="enter your user name" placeholder="ต้องมี3ตัวอักษรขึ้นไป" required/><a id="st1" style="color:black"></a></td>
+</tr>
+<tr>
+<th>ชื่อจริง</th>
+<td><input type="text"  name="name" title="enter your first name" placeholder="กรอกชื่อจริง" id="fn2" required/></td>
+</tr>
+<tr>
+<th>นามสกุล</th>
+<td><input type="text" name="lname"  title="enter your last name" placeholder="กรอกนามสกุลจริง" id="fn3" required/></td>
+</tr>
+<tr>
+<th>รหัสผ่าน</th>
+<td><input type="password" id="inputpass" placeholder="ต้องมี6ตัวอักษรขึ้นไป" required/><br><input type="checkbox" onclick="passwordvisible()">แสดงรหัสผ่าน</td>
+</tr>
+<tr>
+<th>กรอกรหัสผ่านซ้ำ</th>
+<td><input type="password" name="pass" id="psw"  placeholder="ต้องมี6ตัวอักษรขึ้นไป" required/><a id="st2"></a></td>
+</tr>
+<tr>
+<th>อีเมลล์</th>
+<td><input type="email" name="email" id="email" size="30" placeholder="ต้องเป็นemailจริงไว้สำหรับกู้รหัสผ่าน" required/><a id="result" ></a></td>
+</tr>
+<tr>
+<th>เบอร์โทรศัพท์</th>
+<td><input type="number" name="tel" id="tel" required/></td>
+</tr>
+<tr>
+<th>วันเกิด</th>
+<td><input type="date" name="bod" id="date" id="dob" required/></td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+<a id="res"> </a>
+<input  id="enter" type="button" value="ลงทะเบียน" style="cursor:pointer" onclick="registermember()"/>
+<input type="reset" value="รีเซ็ตข้อมูล" style="cursor:pointer" onclick="resetdata()"/>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="right">
+<p id="re"></p>
+<a href="login.html">ไปยังหน้าเข้าสู่ระบบ</a>
+</td>
+</tr>
+<caption style="font-size:10px">จำเป็นต้องกรอก username,password และ email</caption>
+</table>
+</form>
+</body>
+</html>

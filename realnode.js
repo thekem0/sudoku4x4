@@ -1,0 +1,39 @@
+$(function () {
+    $('select').change(function () {
+        $('#rn1').text(localStorage.getItem('n1').replace('0','-'));
+		$("#rn2").text(localStorage.getItem('n2').replace('0','-'));
+		$("#rn3").text(localStorage.getItem('n3').replace('0','-'));
+		$("#rn4").text(localStorage.getItem('n4').replace('0','-'));
+		$("#rn5").text(localStorage.getItem('n5').replace('0','-'));
+		$("#rn6").text(localStorage.getItem('n6').replace('0','-'));
+		$("#rn7").text(localStorage.getItem('n7').replace('0','-'));
+		$("#rn8").text(localStorage.getItem('n8').replace('0','-'));
+		$("#rn9").text(localStorage.getItem('n9').replace('0','-'));
+		$("#rn10").text(localStorage.getItem('n10').replace('0','-'));
+		$("#rn11").text(localStorage.getItem('n11').replace('0','-'));
+		$("#rn12").text(localStorage.getItem('n12').replace('0','-'));
+		$("#rn13").text(localStorage.getItem('n13').replace('0','-'));
+		$("#rn14").text(localStorage.getItem('n14').replace('0','-'));
+		$("#rn15").text(localStorage.getItem('n15').replace('0','-'));
+		$("#rn16").text(localStorage.getItem('n16').replace('0','-'));
+    });
+	if (localStorage.getItem('n1')) {
+        $('#rn1').text(localStorage.getItem('n1').replace('0','-'));
+        $('#rn2').text(localStorage.getItem('n2').replace('0','-'));
+		$("#rn3").text(localStorage.getItem('n3').replace('0','-'));
+		$("#rn4").text(localStorage.getItem('n4').replace('0','-'));
+		$("#rn5").text(localStorage.getItem('n5').replace('0','-'));
+		$("#rn5").text(localStorage.getItem('n5').replace('0','-'));
+		$("#rn6").text(localStorage.getItem('n6').replace('0','-'));
+		$("#rn7").text(localStorage.getItem('n7').replace('0','-'));
+		$("#rn8").text(localStorage.getItem('n8').replace('0','-'));
+		$("#rn9").text(localStorage.getItem('n9').replace('0','-'));
+		$("#rn10").text(localStorage.getItem('n10').replace('0','-'));
+		$("#rn11").text(localStorage.getItem('n11').replace('0','-'));
+		$("#rn12").text(localStorage.getItem('n12').replace('0','-'));
+		$("#rn13").text(localStorage.getItem('n13').replace('0','-'));
+		$("#rn14").text(localStorage.getItem('n14').replace('0','-'));
+		$("#rn15").text(localStorage.getItem('n15').replace('0','-'));
+		$("#rn16").text(localStorage.getItem('n16').replace('0','-'));
+    }
+});

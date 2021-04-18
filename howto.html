@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>วิธีการใช้งาน</title>
+   <!--Made with love by Mutiullah Samim -->
+   
+	<!--Bootsrap 4 CDN-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!--Fontawesome CDN-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+	<!--Custom styles-->
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="edit.js"></script>
+	<style>
+	.how1 {
+	  position: fixed; /* Stay in place */
+	  z-index: 1; /* Sit on top */
+	  padding-top: 10px; /* Location of the box */
+	  left: 200px;
+	  top: 0;
+	  /*width: 70%; /* Full width */
+	  height: 100%; /* Full height */
+	  overflow: auto; /* Enable scroll if needed */
+	  background-color: rgba(0,0,0,0); /* Black w/ opacity */
+	}
+	.how2 {
+	  position: fixed; /* Stay in place */
+	  z-index: 1; /* Sit on top */
+	  padding-top: 80px; /* Location of the box */
+	  right: 40px;
+	  top: 0;
+	  width: 30%; /* Full width */
+	  height: 100%; /* Full height */
+	  overflow: auto; /* Enable scroll if needed */
+	  background-color: rgba(0,0,0,0); /* Black w/ opacity */
+	}
+	</style>
+</head>
+<body onload="profileread()">
+
+<div class="how1">
+	<br>
+	<img src="weblogo.png" style="width: 200px"/>
+	<br><br><br>
+	<h3> วิธีการใช้งาน</h3>
+	<form style="margin:0px">
+	<ol>
+	<li>สมัครสมาชิก</li>
+	<img src="howtoimg/howto1.png" style="width: 500px;padding: 10px"/>
+	<li>คลิกปุ่มลงทะเบียน ถ้าปรากฎข้อความ "Register Succes"แสดงว่าลงทะเบียนเสร็จสิ้น
+	ถ้าปรากฎข้อความ"Cannot register!"ให้เช็คข้อมูลต่าง ๆ  ให้ถูกต้องแล้วคลิกลงทะเบียนอีกครั้ง</li>
+	<li>กลับไปยังหน้าเข้าสู่ระบบ กรอกชื่อผู้ใช้และรหัสผ่านเพื่อเข้าสู่โปรแกรมหาผลเฉลยของเกม sudoku 4x4</li>
+	</ol>
+	<br>
+	<h3>วิธีใช้โปรแกรมหาผลเฉลย sudoku 4x4</h3>
+	<img src="howtoimg/howto2.png" style="width: 500px;padding: 10px"/>
+	<ol>
+	<li>ในการใช้งานครั้งแรกเมื่อเข้าสู่ระบบได้แล้วควรรีเฟรชหน้าเว็บประมาณ 3 ครั้ง</li>
+	<li>กรอกโจทย์เกมโดยเลือกตัวเลขในช่องต่าง ๆ ด้านซ้าย สามารถตรวจสอบหน้าตาโจทย์ที่ได้ระบุไว้ที่ตารางด้านขวาของหน้าเว็บไซต์</li>
+	<li>เมื่อกรอกโจทย์สำเร็จให้คลิกปุ่ม"ยืนยัน" ระบบจะประมวลผลและแสดงผลเฉลยที่สอดคล้องกับโจทย์ที่กำหนด</li>
+	<li>สามารถคลิกที่ผลเฉลยในแต่ละข้อเพื่อขยายดูผลเฉลยในรูปแบบตาราง sudoku 4x4</li>
+	</ol>
+	</form>
+</div>
+
+</body>
+</html>

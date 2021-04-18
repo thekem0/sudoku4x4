@@ -1,0 +1,82 @@
+  try{
+    var uname = e.parameter.checkuname;
+    var username = DriveApp.getFoldersByName(uname);
+    username.next();
+    return cannotregister();
+  }
+  catch(err){
+    return canregister();
+  }
+   var userfolder = DriveApp.getFoldersByName(username);
+    var userfile = userfolder.next();
+    var profile = userfile.getFilesByName('sudoku4x4solution');
+    var profilefile = profile.next();
+    var getprofile = profilefile.getId();
+    var ss = SpreadsheetApp.openById(getprofile);
+    var sheet = ss.getSheetByName("sheet1");
+    var setpassword = sheet.getRange('v1').setValue(password);
+    var setfn = sheet.getRange('v2').setValue(name);
+    var setln = sheet.getRange('v3').setValue(lastname);
+    var setemail = sheet.getRange('v4').setValue(email);
+    var settel = sheet.getRange('v5').setValue(tel);
+    var setbod = sheet.getRange('v7').setValue(bod);  
+	
+	function canregister(){
+  
+  var jo = {};
+  var dataArray = [];
+  
+  
+  
+    var record = {};
+    record['stat'] = 'yes';
+   
+    
+    dataArray.push(record);
+     
+  
+  jo.user = dataArray;
+  
+  var result = JSON.stringify(jo);
+  
+  return ContentService.createTextOutput(result).setMimeType(ContentService.MimeType.JSON);
+  
+}  
+function cannotregister(){
+  
+  var jo = {};
+  var dataArray = [];
+  
+  
+  
+    var record = {};
+    record['stat'] = 'no';
+   
+    
+    dataArray.push(record);
+     
+  
+  jo.user = dataArray;
+  
+  var result = JSON.stringify(jo);
+  
+  return ContentService.createTextOutput(result).setMimeType(ContentService.MimeType.JSON);
+  
+}  
+    ;(function () {
+        var reloads = [2000, 3000],
+            storageKey = 'reloadIndex',
+            reloadIndex = parseInt(localStorage.getItem(storageKey), 10) || 0;
+
+        if (reloadIndex >= reloads.length || isNaN(reloadIndex)) {
+            localStorage.removeItem(storageKey);
+            return;
+        }
+
+        setTimeout(function(){
+			return input();
+            //window.location.reload();
+        }, reloads[reloadIndex]);
+
+        localStorage.setItem(storageKey, parseInt(reloadIndex, 10) + 1);
+    }());
